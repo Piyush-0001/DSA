@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class FindGCD1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        // Using Euclidean Algorithm
+        while(a>0 && b>0){
+            if(a>b){
+                a = a % b;
+            }else{
+                b = b % a;
+            }
+        }
+        if(a == 0){
+            System.out.println("gcd is "+b);
+        }else{
+            System.out.println("gcd is "+a);
+        }
+        sc.close();
+    }
+}
